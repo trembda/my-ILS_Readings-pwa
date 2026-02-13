@@ -1,21 +1,26 @@
 {
-  "name": "ILS Normac - Lectures",
+  "name": "ILS",
   "short_name": "ILS",
-  "start_url": "./",
-  "scope": "./",
+  "start_url": ".",
   "display": "standalone",
-  "background_color": "#05070A",
-  "theme_color": "#05070A",
+  "background_color": "#FFFFFF",
+  "theme_color": "#0B4EA2",
   "icons": [
     {
-      "src": "icons/icon-192.png",
+      "src": "icons/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "icons/icon-512.png",
+      "src": "icons/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512x512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }
