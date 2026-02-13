@@ -1573,9 +1573,9 @@ const I18N_EN = {
   "DDM 90 Hz normal": "Normal 90 Hz DDM",
   "DDM 150 Hz normal": "Normal 150 Hz DDM",
   "CL DDM normal": "Normal CL DDM",
-  "ΔCL = CL DDM normal - CL DDM (FC)": "ΔCL = CL normal DDM - CL DDM (FC)",
-  "90 Hz corrigé = DDM 90 Hz - ΔCL": "Corrected 90 Hz = 90 Hz DDM - ΔCL",
-  "150 Hz corrigé = DDM 150 Hz - ΔCL": "Corrected 150 Hz = 150 Hz DDM - ΔCL",
+  "ΔCL = CL DDM - CL DDM (FC)": "ΔCL = CL DDM now - CL DDM (FC)",
+  "90Hz corrigé = DDM 90 Hz - ΔCL": "Corrected 90Hz = 90Hz DDM - ΔCL",
+  "150Hz corrigé = DDM 150 Hz - ΔCL": "Corrected 150 Hz = 150Hz DDM - ΔCL",
   "Configuration normale: CL test off / DS test off / Test RF attenuation OFF.": "Normal configuration: CL test off / DS test off / Test RF attenuation OFF."
 
 };
@@ -2855,9 +2855,9 @@ if (s.type === "calc") {
       lines.push("");
       lines.push(tr("Formules"));
       lines.push("-----------------------------------------");
-      lines.push(`${tr("ΔCL = CL DDM normal - CL DDM (FC)")} = ${delta === null ? "—" : `${fmt(delta)} µA`}`);
-      lines.push(`${tr("90 Hz corrigé = DDM 90 Hz - ΔCL")} = ${c90 === null ? "—" : `${fmt(c90)} µA`}`);
-      lines.push(`${tr("150 Hz corrigé = DDM 150 Hz - ΔCL")} = ${c150 === null ? "—" : `${fmt(c150)} µA`}`);
+      lines.push(`${tr("ΔCL = CL DDM - CL DDM (FC)")} = ${delta === null ? "—" : `${fmt(delta)} µA`}`);
+      lines.push(`${tr("90Hz corrigé = DDM 90Hz - ΔCL")} = ${c90 === null ? "—" : `${fmt(c90)} µA`}`);
+      lines.push(`${tr("150Hz corrigé = DDM 150Hz - ΔCL")} = ${c150 === null ? "—" : `${fmt(c150)} µA`}`);
     lines.push("");
     lines.push(tr("Notes"));
       lines.push("-----------------------------------------");
@@ -2910,8 +2910,8 @@ if (s.type === "calc") {
     lines.push(tr("Formules"));
     lines.push("-----------------------------------------");
     lines.push(`${tr("ΔCL = CL DDM normal - CL DDM (FC)")} = ${delta === null ? "—" : `${fmt(delta)} µA`}`);
-    lines.push(`${tr("90 Hz corrigé = DDM 90 Hz - ΔCL")} = ${c90 === null ? "—" : `${fmt(c90)} µA`}`);
-    lines.push(`${tr("150 Hz corrigé = DDM 150 Hz - ΔCL")} = ${c150 === null ? "—" : `${fmt(c150)} µA`}`);
+    lines.push(`${tr("90Hz corrigé = DDM 90Hz - ΔCL")} = ${c90 === null ? "—" : `${fmt(c90)} µA`}`);
+    lines.push(`${tr("150Hz corrigé = DDM 150Hz - ΔCL")} = ${c150 === null ? "—" : `${fmt(c150)} µA`}`);
   lines.push("");
     lines.push("-----------------------------------------");
     return lines.join("\n");
