@@ -2235,6 +2235,10 @@ function resetAll(){
         const code = (oldRun.match(/^[A-Za-z]{3}/) || [""])[0].toUpperCase();
         if (code === "IQB") state.meta.siteid = "Québec/IQB";
         else if (code === "IZV") state.meta.siteid = "Sept-Îles/IZV";
+        else if (code === "ITF") state.meta.siteid = "Alma/ITF";
+        else if (code === "IBC") state.meta.siteid = "Baie-Comeau/IBC";
+        else if (code === "IGR") state.meta.siteid = "Îles-de-la-Madelaine/IGR";
+        else if (code === "IGP") state.meta.siteid = "Gaspé/IGP";
         else if (oldRun || oldSite) state.meta.siteid = "Autre/IXX";
       }
       // Nettoyage (évite d'afficher/propager les vieux champs)
