@@ -4,9 +4,10 @@ const ASSETS = [
   "./index.html",
   "./ILS_Readings_fixed_v3.html",
   "./manifest.webmanifest",
-  "./sw.js",
-  "./icons/icon-192.png",
-  "./icons/icon-512.png"
+  "./favicon.ico",
+  "./icons/icon-192x192.png",
+  "./icons/icon-512x512.png",
+  "./icons/icon-512x512-maskable.png"
 ];
 
 self.addEventListener("install", (event) => {
@@ -31,19 +32,17 @@ self.addEventListener("fetch", (event) => {
 
   event.respondWith((async () => {
     const cache = await caches.open(CACHE);
-    const cached = await cache.match(req, { ignoreSearch: true });
+
+    const cached = await cache.match(req);
     if (cached) return cached;
 
     try {
       const fresh = await fetch(req);
       const url = new URL(req.url);
-      if (url.origin === self.location.origin) {
-        cache.put(req, fresh.clone());
-      }
+      if (url.origin === self.location.origin) cache.put(req, fresh.clone());
       return fresh;
-    } catch (e) {
-      // Offline fallback
-      return cache.match("./index.html") || cache.match("./ILS_Readings_fixed_v3.html");
+    } catch {
+      return (await cache.match("./index.html")) || (await cache.match("./ILS_Readings_fixed_v3.html"));
     }
   })());
 });
