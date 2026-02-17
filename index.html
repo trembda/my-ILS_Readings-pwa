@@ -541,19 +541,15 @@ body.theme-day select:focus{
 /* ---------- BUTTONS / NAV ---------- */
 .btnRow{
   position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  
+  left: 0; right: 0; bottom: 0;
   display:flex;
-  justify-content:center;   /* centré horizontalement */
-  align-items:center;       /* centré verticalement */
+  justify-content:center;
+  align-items:center;
+
   height: calc(var(--navH) + env(safe-area-inset-bottom, 0px));
-  gap: 12px;
-  min-height: 110px;
   padding: 0 14px env(safe-area-inset-bottom, 0px);
-  background: rgba(0,0,0,.15);
-  backdrop-filter: blur(8px);
+  background: #000;              /* noir stable */
+  backdrop-filter: none;         /* optionnel */
   z-index: 50;
 }
 button{
@@ -852,10 +848,10 @@ button:active{ transform: translateY(1px); }
 .toast.show{ opacity: 1; }
 
 /* ---------- SMALL SCREEN TWEAKS ---------- */
-@media (max-width: 420px){
-  header{ gap: 10px; padding: 10px 12px; }
-  .brandInstitutional{ letter-spacing: .22em; }
-  .panel{ padding: 14px; }
+@media (max-width: 430px), (max-height: 760px){
+  .btnRow{
+    padding: 0 12px env(safe-area-inset-bottom, 0px);
+  }
 }
 
 /* === Fix résumé: préserver les retours de ligne et l'alignement === */
