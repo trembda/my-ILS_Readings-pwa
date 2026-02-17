@@ -1,4 +1,4 @@
-const CACHE = "ils-readings-pwa-v18";
+const CACHE = "ils-readings-pwa-v19";
 const ASSETS = [
   "./",
   "./index.html",
