@@ -23,6 +23,7 @@
 
 /* ---------- THEME TOKENS (variables) ---------- */
 :root{
+  --navH: 110px;
   --glow1: rgba(47,129,247,.10);
   --glow2: rgba(245,158,11,.07);
   --bg:#0f1115;
@@ -543,14 +544,17 @@ body.theme-day select:focus{
   left: 0;
   right: 0;
   bottom: 0;
+  
   display:flex;
   justify-content:center;   /* centré horizontalement */
   align-items:center;       /* centré verticalement */
+  
   gap: 12px;
-  padding: 18px 14px calc(18px + env(safe-area-inset-bottom, 0px));
+  min-height: 110px;
+  padding: 0 14px;
   background: rgba(0,0,0,.15);
   backdrop-filter: blur(8px);
-
+  z-index: 50;
 }
 button{
   flex:1;
@@ -1422,7 +1426,7 @@ body.modalOpen{
   .btnRow .homeBtn svg{ width:20px; height:20px; }
 
   /* Keep content clear of the fixed bottom nav */
-  .wrap{ padding: calc(12px + var(--headerH)) 12px calc(96px + env(safe-area-inset-bottom)); }
+  .wrap{ padding: calc(12px + var(--headerH)) 12px calc(var(--navH) + env(safe-area-inset-bottom, 0px)); }
 }
 
 
