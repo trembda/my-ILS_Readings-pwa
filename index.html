@@ -547,7 +547,7 @@ body.theme-day select:focus{
   justify-content:center;   /* centré horizontalement */
   align-items:center;       /* centré verticalement */
   gap: 12px;
-  padding: 12px 14px;
+  padding: 18px 14px calc(18px + env(safe-area-inset-bottom, 0px));
   background: rgba(0,0,0,.15);
   backdrop-filter: blur(8px);
 
