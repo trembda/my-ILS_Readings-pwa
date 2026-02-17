@@ -548,10 +548,10 @@ body.theme-day select:focus{
   display:flex;
   justify-content:center;   /* centré horizontalement */
   align-items:center;       /* centré verticalement */
-  
+  height: calc(var(--navH) + env(safe-area-inset-bottom, 0px));
   gap: 12px;
   min-height: 110px;
-  padding: 0 14px;
+  padding: 0 14px env(safe-area-inset-bottom, 0px);
   background: rgba(0,0,0,.15);
   backdrop-filter: blur(8px);
   z-index: 50;
